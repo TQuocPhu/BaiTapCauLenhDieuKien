@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Kiem Tra Nam Nhuan</title>
+    </head>
+    <body>
+        <input type="number" name="year" id="year" placeholder="Nhap nam: ">
+        <input type="submit" value="Check" id="checkYear" onclick="checkYear();">
+
+        <script>
+
+        let checkYear = () => {
+            let year = document.getElementById("year").value;
+            let isNamNhuan = false;
+
+            if((year % 4 == 0 && year % 100 != 0) || year % 400 == 0){
+                isNamNhuan = true;
+            }
+            
+            if(isNamNhuan){
+                document.write("Nam " + year + "la nam nhuan");
+            } else {
+                document.write("Nam " + year + "khong phai la nam nhuan");
+            }
+        }
+    </script>
+    </body>
+</html>
