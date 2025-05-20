@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do You Love Me</title>
+</head>
+
+<style>
+    .loveCont{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .loveCont h1{
+        color: pink;
+        font-size: 20px;
+    }
+
+    #btnNo{
+        position: absolute;
+    }
+</style>
+<body>
+    <div class="loveCont">
+        <h1>"Do you love me?"</h1>
+        <button onclick="clickYes()">Yes</button>
+        <button id="btnNo" onmousemove="hoverButton()">No</button>
+    </div>
+
+    <script>
+        let clickYes = () => {
+            alert("I love you too !")
+        }
+
+        let hoverButton = () => {
+            let cachTren = Math.random() * window.innerHeight - 10; //lay chieu cao cua man hinh
+            let cachDuoi = Math.random() * window.innerHeight - 10;
+            document.getElementById("btnNo").style.top = cachTren + "px";
+            document.getElementById("btnNo").style.right = cachDuoi + "px";
+        }
+        // document.getElementById("no_btn").style.top = 50px;
+        // document.getElementById("no_btn").style.right = 200px;
+
+    </script>
+</body>
+</html>
