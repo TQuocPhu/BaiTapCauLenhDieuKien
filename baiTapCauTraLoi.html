@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai Tap Cau Tra Loi</title>
+</head>
+<body>
+    <span>What is the "official" name of JavaScript?</span>
+    <input type="text" name="answer" id="answer" 
+        placeholder="Your answer:">
+    <input type="submit" value="Submit" onclick="submitAnswer()">
+
+    <script>
+        let submitAnswer = () => {
+            let answer = document.getElementById("answer").value;
+            if(answer == 'ECMAScript'){
+                alert("Right");
+            } else {
+                alert("You don't know? ECMAScript!");
+            }
+
+        }
+    </script>
+
+</body>
+</html>
